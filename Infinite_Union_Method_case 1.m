@@ -42,7 +42,7 @@ max(x)  %% the highest voltage among CPD's voltage
 min(x)  %% the lowest voltage among CPD's voltage
 u_L=uref*x; %% CPD's voltage is obtained 
 
-i_S=ones(1,113)*([-pM;pL]./u_L)*(ones(1,10)*K*ones(10,1))^(-1)*K*ones(10,1); %% Currents of DCC-DGs
+i_S=ones(1,113)*([-pM;pL]./u_L)*(ones(1,10)*K^(-1)*ones(10,1))^(-1)*K^(-1)*ones(10,1); %% Currents of DCC-DGs
 i_max=[100*ones(5,1);200*ones(5,1)];
 
 tau=ones(1,113)*([-pM;pL]./[1.2*ones(20,1);0.8*ones(93,1)])/(uref*ones(1,10)*i_max)
